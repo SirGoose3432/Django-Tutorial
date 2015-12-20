@@ -17,5 +17,4 @@ def pets_index(request):
     context['owners'] = Owner.objects.all()
     context['pets'] = Pet.objects.all()
     # the render method allows us to render a page
-    return render(request, 'pets/pets_index.html', context)
-
+    return render(request, 'pets/index.html', context)
