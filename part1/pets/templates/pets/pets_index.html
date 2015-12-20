@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h3>A List of Owners and Their Pets</h3>
+{# Execute python loops and if statements with {%  %} #}
+{% for owner in owners %}
+    {# Access data passed in via context with {{  }}  #}
+    <p>{{ owner.first_name }} {{ owner.last_name }}</p>
+    <ul>
+        {% for pet in pets %}
+            {% if pet.owner == owner %}
+                <li>{{ pet.name }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endfor %}
+</body>
+</html>
