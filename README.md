@@ -5,57 +5,71 @@
 
 
 <h4>Part 1</h4>
-Creating a basic project
+<p>Creating a basic project</p>
 
-- Creating a few basic models
-- Making migrations
-- Interacting with the Django admin
-- Creating a few simple views
-- Creating a few simple templates
-- Creating urls
+<ul>
+    <li>Creating a few basic models</li>
+    <li>Making migrations</li>
+    <li>Interacting with the Django admin</li>
+    <li>Creating a few simple views</li>
+    <li>Creating a few simple templates</li>
+    <li>Creating urls</li>
+</ul>
 
 <h4>Part 2</h4>
-Creating views with forms
+<p>Creating views with forms</p>
 
-- Adding more fields to models
-- Creating a view that involves GET and POST requests and adds data to the database
-- Creating forms from models
-- Adding more templates
-- Adding more urls
+<ul>
+    <li>Adding more fields to models</li>
+    <li>Creating a view that involves GET and POST requests and adds data to the database</li>
+    <li>Creating forms from models</li>
+    <li>Adding more templates</li>
+    <li>Adding more urls</li>
+</ul>
 
 <h4>Part 3</h4>
-Expanding upon forms and html pages
+<p>Expanding upon forms and html pages<p>
 
-- Adding validators to models
-- Add form error handling to views and html pages
+<ul>
+    <li>Adding validators to models</li>
+    <li>Add form error handling to views and html pages</li>
+</ul>
 
 <h4>Part 4</h4>
-Adding in a login and accounts system
+<p>Adding in a login and accounts system</p>
 
-- Creating a user model that inherits from the built in user model
-- Create a page that allows owners to log into the webapp
+<ul>
+    <li>Creating a user model that inherits from the built in user model</li>
+    <li>Create a page that allows owners to log into the webapp</li>
+</ul>
 
-<h4>Part 5/<h4>
-Adding in more functional pages
+<h4>Part 5</h4>
+<p>Adding in more functional pages</p>
 
-- Allow for owners to add their own pets
-- Allow for owners to view all their pets
-- Allow for owners to edit their pet's information
+<ul>
+    <li>Allow for owners to add their own pets</li>
+    <li>Allow for owners to view all their pets</li>
+    <li>Allow for owners to edit their pet's information</li>
+</ul>
 
 <h4>Part 6</h4>
-Adding bootstrap to the project
+<p>Adding bootstrap to the project</p>
 
-- Finding and using a bootstrap template
-- Installing a template and getting all the static files together
-- Creating a base.html
+<ul>
+    <li>Finding and using a bootstrap template</li>
+    <li>Installing a template and getting all the static files together</li>
+    <li>Creating a base.html</li>
+</ul>
 
 <h4>Part 7</h4>
-Adding bootstrap to the project
+<p>Adding bootstrap to the project</p>
 
-- Modifying each template to conform to the look for the new bootstrap template
+<ul>
+    <li>Modifying each template to conform to the look for the new bootstrap template</li>
+</ul>
 
 <h4>Part 8</h4>
-Review and Tips for swen-261
+<p>Review and Tips for swen-261</p>
 
 <h4>Part 9</h4>
 
