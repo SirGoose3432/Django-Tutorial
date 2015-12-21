@@ -24,3 +24,28 @@ Expanding upon forms and html pages
 - Adding validators to models
 - Add form error handling to views and html pages
 
+# Part 4
+Adding in a login and accounts system
+
+- Creating a user model that inherits from the built in user model
+- Create a page that allows owners to log into the webapp
+
+# Part 5
+Adding in more functional pages
+
+- Allow for owners to add their own pets
+- Allow for owners to view all their pets
+- Allow for owners to edit their pet's information
+
+# Part 6
+Adding bootstrap to the project
+
+- Finding and using a bootstrap template
+- Installing a template and getting all the static files together
+- Creating a base.html
+
+# Part 7
+Adding bootstrap to the project
+
+- Modifying each template to conform to the look for the new bootstrap template
+
