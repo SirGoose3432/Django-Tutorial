@@ -6,15 +6,76 @@
 </head>
 <body>
 <h3>Create a New Pet</h3>
-{# It is important to redirect the form to the correct url and method #}
-{# This is how data from the form page gets back to the create_owner method in views.py #}
+{# List out all the errors the form has at the very top of the page #}
+{# This if statement checks if any errors exist in the form #}
+{% if form.errors %}
+    {# Iterate through all the fields in the form #}
+    {% for field in form %}
+        {# Iterate through all the errors of each field #}
+        <div>
+            <ul>
+                {% for error in field.errors %}
+                    {# Display the error for the user to see #}
+                    <li><strong>{{ field.label }}: {{ error|escape }}</strong></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+    {# Iterate through all non_field_errors if they exist #}
+    {# non_field_errors are errors that don't pertain to a specific field #}
+    <div>
+        <ul>
+            {% for error in form.non_field_errors %}
+                <li><strong>{{ error|escape }}</strong></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
 <form method="post" action='{% url 'pets:create_pet' %}' enctype="multipart/form-data">
-    {# csrf_token is required whenever data is being submitted to a page. #}
     {% csrf_token %}
-    {# We can format the form as we like by getting each form field from the form passed in via context along with html tags#}
+    {# Get the errors for each individual field and display them next to each field #}
+    {# Check if a the specific field has any errors #}
+    {% if form.name.errors %}
+        <div>
+            <ul>
+                {# Iterate through all the errors of the name field #}
+                {% for error in form.name.errors %}
+                    {# Display the error for the user to see #}
+                    <li><strong>{{ error|escape }}</strong></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
     <p>Name: {{ form.name }}</p>
+    {% if form.type.errors %}
+        <div>
+            <ul>
+                {% for error in form.type.errors %}
+                    <li><strong>{{ error|escape }}</strong></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
     <p>Type: {{ form.type }}</p>
+    {% if form.age.errors %}
+        <div>
+            <ul>
+                {% for error in form.age.errors %}
+                    <li><strong>{{ error|escape }}</strong></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
     <p>Age: {{ form.age }}</p>
+    {% if form.owner.errors %}
+        <div>
+            <ul>
+                {% for error in form.owner.errors %}
+                    <li><strong>{{ error|escape }}</strong></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
     <p>Owner: {{ form.owner }}</p>
     <button type="submit">Submit</button>
 </form>

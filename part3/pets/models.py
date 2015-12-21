@@ -19,11 +19,16 @@ class Owner(models.Model):
         ("Bird", "Bird"),
     }
 
+    # first_name should only be a string
+    # to make sure first_name is only a string and is in the correct format use validators
     first_name = models.CharField(
             'First Name',
             max_length=50,
             default=' ',
+            # validators are placed in the field definition as a list
             validators=[
+                # one type of validator is the regex validator
+                # it uses a regex to dictate the format of the string
                 validators.RegexValidator(
                         r'^[A-Z][a-zA-Z]*[^_]$',
                         'Name invalid. This value must start with an '
@@ -64,7 +69,30 @@ class Pet(models.Model):
         ("Bird", "Bird"),
     }
 
-    name = models.CharField('Name', max_length=50, default=' ')
+    name = models.CharField(
+            'Name',
+            max_length=50,
+            default=' ',
+            validators=[
+                validators.RegexValidator(
+                        r'^[A-Z][a-zA-Z]*[^_]$',
+                        'Name invalid. This value must start with an '
+                        'uppercase letter and only contain letters.'
+                )
+            ]
+    )
     type = models.CharField('Type', max_length=30, choices=PET_TYPE_CHOICES)
     owner = models.ForeignKey('Owner', Owner)
-    age = models.PositiveIntegerField('Age', default=0)
+    age = models.PositiveIntegerField(
+            'Age',
+            default=0,
+            validators=[
+                # Another type of validator is a MinValueValidator
+                # It allows for a minimu value to be set
+                validators.MinValueValidator(
+                        1,
+                        'Age invalid. Enter an age greater than one.'
+                )
+
+            ]
+    )
