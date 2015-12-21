@@ -4,7 +4,6 @@ from .models import Pet, Owner
 from .forms import PetForm, OwnerForm
 
 
-# Example of a regular view
 def pets_index(request):
     """
     Renders a page showing a list of owners and their pets

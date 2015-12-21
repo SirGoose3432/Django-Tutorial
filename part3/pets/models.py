@@ -88,7 +88,7 @@ class Pet(models.Model):
             default=0,
             validators=[
                 # Another type of validator is a MinValueValidator
-                # It allows for a minimu value to be set
+                # It allows for a minimum value to be set
                 validators.MinValueValidator(
                         1,
                         'Age invalid. Enter an age greater than one.'
