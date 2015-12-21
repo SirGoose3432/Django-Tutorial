@@ -1,4 +1,5 @@
 # Django-Tutorial
+
 A Django tutorial meant for those taking swen-261 at RIT
 This tutorial uses Python 3.4.3, Django 1.9, and Sqlite3 3.8.2
 All finished tutorial code will be uploaded here
