@@ -6,17 +6,19 @@
 </head>
 <body>
 <h3>Create a New Pet</h3>
-{# It is important to redirect the form to the correct url and method #}
+{# Forms need to have their method and action set #}
+{# action must direct to the url that the form data must sent to #}
 {# This is how data from the form page gets back to the create_owner method in views.py #}
 <form method="post" action='{% url 'pets:create_pet' %}' enctype="multipart/form-data">
     {# csrf_token is required whenever data is being submitted to a page. #}
     {% csrf_token %}
-    {# We can format the form as we like by getting each form field from the form passed in via context along with html tags#}
+    {# Forms can be formatted with html tags #}
     <p>Name: {{ form.name }}</p>
     <p>Type: {{ form.type }}</p>
     <p>Age: {{ form.age }}</p>
     <p>Owner: {{ form.owner }}</p>
     <button type="submit">Submit</button>
+    <button type="button" onclick="location.href='{% url 'pets:home' %}'">Back</button>
 </form>
 </body>
 </html>

@@ -51,9 +51,8 @@ class Owner(models.Model):
     dob = models.DateField('Date of Birth')
     favorite_pet_type = models.CharField('Favorite Type of Pet', max_length=50, choices=PET_TYPE_CHOICES, blank=True)
 
-
-def __str__(self):
-    return self.first_name + " " + self.last_name
+    def __str__(self):
+        return self.first_name + " " + self.last_name
 
 
 class Pet(models.Model):

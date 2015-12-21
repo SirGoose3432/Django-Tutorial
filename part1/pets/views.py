@@ -18,3 +18,12 @@ def pets_index(request):
     context['pets'] = Pet.objects.all()
     # the render method allows us to render a page
     return render(request, 'pets/index.html', context)
+
+
+def pets_home(request):
+    """
+    Renders the homepage of links to the rest of the pages
+    :param request:
+    :return: homepage
+    """
+    return render(request, 'pets/home.html')

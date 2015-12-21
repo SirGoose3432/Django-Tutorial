@@ -78,6 +78,7 @@
     {% endif %}
     <p>Owner: {{ form.owner }}</p>
     <button type="submit">Submit</button>
+    <button type="button" onclick="location.href='{% url 'pets:home' %}'">Back</button>
 </form>
 </body>
 </html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h3>Homepage For Owners and Pets</h3>
+{# This is a link in html and django. Here, dynamic urls are used with namespacing #}
+<p><a href='{% url 'pets:index' %}'>View all pets and owners</a></p>
+</body>
+</html>

@@ -6,14 +6,17 @@
 </head>
 <body>
 <h3>Create a New Owner</h3>
-{# It is important to redirect the form to the correct url and method #}
+{# Forms need to have their method and action set #}
+{# action must direct to the url that the form data must sent to #}
 {# This is how data from the form page gets back to the create_owner method in views.py #}
 <form method="post" action='{% url 'pets:create_owner' %}' enctype="multipart/form-data">
     {# csrf_token is required whenever data is being submitted to a page. #}
     {% csrf_token %}
-    {# This is how we write a simple form page. when using form.as_p, django automatically formats the form. #}
+    {# This is a simple for page #}
+    {# Using form.as_p has Django automatically format forms #}
     {{ form.as_p }}
     <button type="submit">Submit</button>
+    <button type="button" onclick="location.href='{% url 'pets:home' %}'">Back</button>
 </form>
 </body>
 </html>

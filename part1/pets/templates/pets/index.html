@@ -8,7 +8,7 @@
 <h3>A List of Owners and Their Pets</h3>
 {# Execute python loops and if statements with {%  %} #}
 {% for owner in owners %}
-    {# Access data passed in via context with {{  }}  #}
+    {# Access data passed in via context with {{  }} brackets  #}
     <p>{{ owner.first_name }} {{ owner.last_name }}</p>
     <ul>
         {% for pet in pets %}
@@ -18,5 +18,7 @@
         {% endfor %}
     </ul>
 {% endfor %}
+{# Buttons can also be used as links by setting their type to button and their onlick action #}
+<button type="button" onclick="location.href='{% url 'pets:home' %}'">Back</button>
 </body>
 </html>

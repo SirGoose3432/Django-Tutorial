@@ -5,17 +5,19 @@ A Django tutorial meant for those taking swen-261 at RIT
 Creating a basic project
 
 - Creating a few basic models
+- Making migrations
 - Interacting with the Django admin
-- Creating a simple view
+- Creating a few simple views
+- Creating a few simple templates
 - Creating urls
 
 # Part 2
-Creating views that actually do something with forms
+Creating views with forms
 
 - Adding more fields to models
 - Creating a view that involves GET and POST requests and adds data to the database
 - Creating forms from models
-- Adding more html pages
+- Adding more templates
 - Adding more urls
 
 # Part 3
@@ -48,4 +50,10 @@ Adding bootstrap to the project
 Adding bootstrap to the project
 
 - Modifying each template to conform to the look for the new bootstrap template
+
+# Part 8
+Review and Tips for swen-261
+
+# Part 9
+
 

@@ -18,11 +18,12 @@ class Owner(models.Model):
         ("Bird", "Bird"),
     }
 
+    # If a field is not optional, it must have a default value otherwise errors will occur when making migrations
     first_name = models.CharField('First Name', max_length=50, default=' ')
     last_name = models.CharField('Last Name', max_length=50, default=' ')
     dob = models.DateField('Date of Birth')
     # The field favorite_pet_type is optional since the parameter blank is set to True
-    # If a field is not optional, it must have a default value otherwise errors will occur
+    # Fields can be given choices to choose from
     favorite_pet_type = models.CharField('Favorite Type of Pet', max_length=50, choices=PET_TYPE_CHOICES, blank=True)
 
     def __str__(self):
@@ -48,7 +49,6 @@ class Pet(models.Model):
     }
 
     name = models.CharField('Name', max_length=50, default=' ')
-    # We can give a field choices to pick from
     type = models.CharField('Type', max_length=30, choices=PET_TYPE_CHOICES)
     # ForeignKeys represent many-to-one relations.
     # Here a Pet can have one Owner, but an Owner can have many pets.
