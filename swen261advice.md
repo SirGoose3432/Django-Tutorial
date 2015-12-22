@@ -1,1 +1,5 @@
-<h4>Advice</h4>
+SWEN-261 Advice
+
+Development
+
+- Always make migrations

@@ -21,5 +21,5 @@ from django.views.generic import RedirectView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^pets/', include('pets.urls', namespace='pets')),
-    url(r'^$', RedirectView.as_view(pattern_name='pets:home', permanent=False)),
+    url(r'^$', RedirectView.as_view(pattern_name='pets:login', permanent=False)),
 ]
