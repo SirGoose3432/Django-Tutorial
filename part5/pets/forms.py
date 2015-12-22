@@ -38,7 +38,6 @@ class UserForm(forms.ModelForm):
         'password_mismatch': _("The two password fields didn't match."),
     }
 
-    # Extra fields can be added to model forms as well
     password1 = forms.CharField(label=_("Password"),
                                 widget=forms.PasswordInput)
     password2 = forms.CharField(label=_("Password confirmation"),
@@ -47,10 +46,8 @@ class UserForm(forms.ModelForm):
 
     class Meta:
         model = User
-        # In the meta, fields that are from the model are written here
         fields = ("username", "email", "first_name", "last_name")
 
-    # cleaning data is done below
     def clean_password2(self):
         password1 = self.cleaned_data.get("password1")
         password2 = self.cleaned_data.get("password2")
@@ -63,7 +60,6 @@ class UserForm(forms.ModelForm):
         password_validation.validate_password(self.cleaned_data.get('password2'), self.instance)
         return password2
 
-    # each form has a save method. it can be override and changed like below.
     def save(self, commit=True):
         user = super(UserForm, self).save(commit=False)
         user.set_password(self.cleaned_data["password1"])
@@ -72,7 +68,6 @@ class UserForm(forms.ModelForm):
         return user
 
 
-# This is a regular form. It doesn't correspond to a model so doesn't have a meta section like a ModelForm
 class LoginForm(forms.Form):
     """
     Form for getting fields necessary for a login
