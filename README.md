@@ -44,10 +44,11 @@
 </ul>
 
 <h4>Part 5</h4>
-<p>Unit Tests</p>
+<p>Writing units tests in Django</p>
 
 <ul>
-    <li>Writing unit tests in Django</li>
+    <li>Testing the use of a tostring method for a model</li>
+    <li>Testing the creation of models that have in a many-to-one relation</li>
 </ul>
 
 <h4>Part 6</h4>
