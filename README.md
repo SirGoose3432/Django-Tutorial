@@ -44,12 +44,10 @@
 </ul>
 
 <h4>Part 5</h4>
-<p>Adding in more functional pages</p>
+<p>Unit Tests</p>
 
 <ul>
-    <li>Allow for owners to add their own pets</li>
-    <li>Allow for owners to view all their pets</li>
-    <li>Allow for owners to edit their pet's information</li>
+    <li>Writing unit tests in Django</li>
 </ul>
 
 <h4>Part 6</h4>
