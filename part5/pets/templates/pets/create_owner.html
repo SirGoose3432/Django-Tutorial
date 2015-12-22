@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Owner</title>
+</head>
+<body>
+<h3>Create a New Owner</h3>
+<form method="post" action='{% url 'pets:create_owner' %}' enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+    <button type="button" onclick="location.href='{% url 'pets:home' %}'">Back</button>
+</form>
+</body>
+</html>
