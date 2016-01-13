@@ -1,0 +1,6 @@
+Django Admin Username and Password
+username: admin
+password: password01
+Regular Users Username and Password
+username: test_user
+password: password01

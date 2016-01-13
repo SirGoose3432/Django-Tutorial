@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h3>Login</h3>
+<form method="post" action="{% url 'pets:login' %}">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>{{ form.username.label }}</td>
+            <td>{{ form.username }}</td>
+        </tr>
+        <tr>
+            <td>{{ form.password.label }}</td>
+            <td>{{ form.password }}</td>
+        </tr>
+    </table>
+    <button type="submit">Login</button>
+</form>
+<p>Don't have an account? Register Now!</p>
+<button type="button" onclick="location.href='{% url 'pets:create_user' %}'">Register</button>
+</body>
+</html>
